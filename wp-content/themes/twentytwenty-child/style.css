@@ -12,10 +12,126 @@
  Text Domain:  twentytwentychild
 */
 
+/*
+    Element Styles
+*/
+
+.home-btn {
+    width: 120px;
+    line-height: 38px;
+    padding: 0px;
+    font-size: 16px;
+}
+
+/*
+    Header Styles
+*/
+
+.header-home {
+    font-size: 18px;
+}
+
+.header-home .navbar {
+    padding: 0px;
+    margin-top: 15px;
+}
+
+.header-home .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-home .login-link {
+    color: white;
+}
+
+.header-home {
+    position: relative;
+    height: 680px;
+    background: rgb(37,39,59);
+    background: -moz-radial-gradient(circle, rgba(37,39,59,1) 0%, rgba(31,35,54,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(37,39,59,1) 0%, rgba(31,35,54,1) 100%);
+    background: radial-gradient(circle, rgba(37,39,59,1) 0%, rgba(31,35,54,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25273b",endColorstr="#1f2336",GradientType=1);
+    margin-bottom: 24px;
+}
+
+.header-home .header-heading-search-wrapper {
+    position: absolute;
+    max-width: 974px;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.header-home .header-headings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.header-home .header-headings .heading {
+    z-index: 1;
+    font-size: 84px;
+    white-space: nowrap;
+}
+
+.header-home .header-headings .sub-heading {
+    font-size: 40px;
+}
+
+.header-home .header-heading-search-wrapper .search-block {
+    position: absolute;
+    width: 100%;
+    bottom: -24px;
+    white-space: nowrap;
+}
+
+.header-home .search-block input {
+    display: inline-block;
+}
+
+.header-home .search-block > input:first-of-type,
+.header-home .search-block > input:nth-of-type(2) {
+    width: 30%;
+}
+
+.header-home .search-block > input:nth-of-type(3) {
+    width: 25%;
+}
+
+.header-home .search-block > input:nth-of-type(4) {
+    width: 15%;
+    background-color: #ff4b64;
+    font-size: 1.6rem;
+}
+
+.header-home .eiffel-tower {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.header-home .eiffel-tower img {
+    display: inline-block;
+}
+
+/*
+    Footer Styles
+*/
+
 .footer-home .footer-heading {
     color: #484848;
     font-size: 28px;
-    font-weight: bold;
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
