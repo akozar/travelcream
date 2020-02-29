@@ -21,6 +21,18 @@
     line-height: 38px;
     padding: 0px;
     font-size: 16px;
+    border-radius: .25rem;
+}
+
+.home-btn.cta {
+    border-color: #f44b65;
+    color: #f44b65;
+}
+
+.home-btn.cta:hover {
+    color: #f8f9fa;
+    background-color: #f44b65;
+    border-color: #f44b65;
 }
 
 /*
@@ -53,7 +65,7 @@
     background: -webkit-radial-gradient(circle, rgba(37,39,59,1) 0%, rgba(31,35,54,1) 100%);
     background: radial-gradient(circle, rgba(37,39,59,1) 0%, rgba(31,35,54,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25273b",endColorstr="#1f2336",GradientType=1);
-    margin-bottom: 24px;
+    margin-bottom: 48px;
 }
 
 .header-home .header-heading-search-wrapper {
@@ -109,6 +121,16 @@
     width: 15%;
     background-color: #ff4b64;
     font-size: 1.6rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition-property: color, background-color, border-color, box-shadow;
+    transition-duration: 0.15s, 0.15s, 0.15s, 0.15s;
+    transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s, 0s, 0s;
+}
+
+.header-home .search-block > input:nth-of-type(4):hover {
+    text-decoration: none;
+    background-color: #c7253c;
 }
 
 .header-home .eiffel-tower {
@@ -125,13 +147,93 @@
 }
 
 /*
-    Footer Styles
+    Section block styles
 */
 
-.footer-home .footer-heading {
+.section-heading {
     color: #484848;
     font-size: 28px;
     font-weight: 500;
+}
+
+.section-links a {
+    color: #484848;
+    line-height: 42px;
+    vertical-align: middle;
+    font-size: 12px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.section-links a.active,
+.section-links a:hover {
+    color: #ff4b64;
+}
+
+.section-content {
+    margin-top: 20px;
+    margin-bottom: 28px;
+}
+
+.flights-tbl-heading {
+    font-size: 16px;
+    font-weight: bold;
+    color: #484848;
+}
+
+.flight-content .airline-logo {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    margin-right: 28px;
+}
+
+.flight-content .airline-logo img {
+    height: 100%;
+}
+
+.flight-content .airline-name-flight-wrapper {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.flight-content .flight-row-first,
+.flight-content .flight-row-second {
+    line-height: 26px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.flight-content .flight-row-first {
+    color: #484848;
+}
+
+.flight-content .flight-row-second {
+    color: rgba(128, 128, 128, 0.79);
+}
+
+.flight-row-content {
+    display: inline-block;
+    text-align: center;
+}
+
+@media (max-width:575.98px) {
+    .flight-row-content {
+        text-align: left;
+    }
+
+    .order-flight-col {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/*
+    Footer Styles
+*/
+
+.footer-home .section-heading {
     margin-bottom: 20px;
 }
 
@@ -161,6 +263,7 @@
 
 .footer-home .footer-heading,
 .footer-home .footer-link-list a,
-.footer-home .footer-link-list p {
+.footer-home .footer-link-list p,
+.footer-home .footer-contact-block p {
     color: #484848;
 }

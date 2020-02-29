@@ -68,7 +68,7 @@ wp_body_open();
             <input type="text" placeholder="Where are you leaving from ?"><!--
             --><input type="text" placeholder="Where do you want to go ?"><!--
             --><input type="text" placeholder="Date"><!--
-            --><input type="submit" placeholder="Search">
+            --><input type="submit" value="Search">
         </form>
     </div>
     <div class="eiffel-tower text-center">

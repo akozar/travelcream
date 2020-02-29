@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-6 col-md-3">
                 <div class="row">
-                    <div class="col footer-heading">Cities</div>
+                    <div class="col section-heading">Cities</div>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -20,7 +20,7 @@
             </div>
             <div class="col-6 col-md-3">
                 <div class="row">
-                    <div class="col footer-heading">Explore</div>
+                    <div class="col section-heading">Explore</div>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -35,7 +35,7 @@
             </div>
             <div class="col-6 col-md-3">
                 <div class="row">
-                    <div class="col footer-heading">About us</div>
+                    <div class="col section-heading">About us</div>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -51,7 +51,7 @@
             </div>
             <div class="col-6 col-md-3">
                 <div class="row">
-                    <div class="col footer-heading">Contact</div>
+                    <div class="col section-heading">Contact</div>
                 </div>
                 <div class="row">
                     <div class="col footer-contact-block">
