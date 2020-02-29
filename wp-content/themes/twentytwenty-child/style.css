@@ -1,0 +1,50 @@
+/*
+ Theme Name:   Twenty Twenty Child
+ Theme URI:    http://example.com/twenty-fifteen-child/
+ Description:  Twenty Twenty Child Theme
+ Author:       John Doe
+ Author URI:   http://example.com
+ Template:     twentytwenty
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twentytwentychild
+*/
+
+.footer-home .footer-heading {
+    color: #484848;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-home .footer-link-list {
+    margin: 0px;
+    list-style: none;
+}
+
+.footer-home .footer-link-list > li {
+    display: block;
+    color: #484848;
+    margin: 0px;
+    font-size: 16px;
+    line-height: 36px;
+}
+
+.footer-home .footer-contact-block p,
+.footer-home .footer-contact-block a {
+    font-size: 16px;
+    line-height: 36px;
+    margin: 0px;
+}
+
+.footer-home .footer-contact-block a {
+    color: #cd2653;
+}
+
+.footer-home .footer-heading,
+.footer-home .footer-link-list a,
+.footer-home .footer-link-list p {
+    color: #484848;
+}
