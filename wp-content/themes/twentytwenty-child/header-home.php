@@ -28,7 +28,7 @@ wp_body_open();
 ?>
 
 <header class="header-home container-fluid">
-    <div class="row">
+    <div class="row navbar-wrapper">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <a class="navbar-brand" href="#">TravelCream</a>
@@ -60,7 +60,7 @@ wp_body_open();
         </div>
     </div>
     <div class="header-heading-search-wrapper">
-        <div class="header-headings text-center">
+        <div class="header-headings text-center d-none d-sm-block">
             <p class="heading">Do you want to visit Paris ?</p>
             <p class="sub-heading">Why not</p>
         </div>

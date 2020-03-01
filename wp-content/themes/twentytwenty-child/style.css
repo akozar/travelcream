@@ -82,8 +82,8 @@
 .header-home .header-headings {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 0px;
+    transform: translateY(-50%);
     color: white;
 }
 
@@ -144,6 +144,50 @@
 
 .header-home .eiffel-tower img {
     display: inline-block;
+}
+
+@media (min-width: 992px) and (max-width:1199px) {
+    .header-home .header-headings {
+        width: 100%;
+    }
+
+    .header-home .header-headings .heading {
+        z-index: 1;
+        font-size: 74px;
+    }
+}
+
+@media (min-width:575.99px) and (max-width:991px) {
+    .header-home .header-headings {
+        width: 100%;
+    }
+
+    .header-home .header-headings .heading {
+        z-index: 1;
+        font-size: 48px;
+    }
+}
+
+@media (max-width:575.98px) {
+    .header-home {
+        height: 320px;
+    }
+
+    .navbar-wrapper {
+        position: relative;
+        z-index: 2;
+    }
+
+    .header-home .header-heading-search-wrapper .search-block {
+        bottom: 20px;
+    }
+
+    .header-home .search-block input {
+        display: block;
+        width: 80% !important;
+        margin: 0 auto;
+        background: white;
+    }
 }
 
 /*

@@ -10,5 +10,6 @@
 
 get_header('home');
 get_template_part( 'templates/flight-section' );
+get_template_part( 'templates/hotels-section' );
 get_footer('home');
 ?>
