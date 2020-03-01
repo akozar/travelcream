@@ -97,30 +97,68 @@ function MockDataGenerator () {
         return 'https://placeimg.com/' + width + '/' + height + '/' + this.getRandArrEl(this.placeIMGTypes);
     }
 
-    this.genRandomItemData = function (travelType) {
+    this.genRandomItemData = function (travelType, idx) {
         switch (travelType) {
-            case 'Flights' : return mockDataObj = {
-                airlineIcon: this.getPlaceIMGUri(48,48),
-                airlineName: this.getRandArrEl(['Delta', 'Vueling', 'American', 'Transavia']),
-                airlineFlightNum: 'DL' + Math.ceil(Math.random() * 10000),
-                departureDate: '03/11/2019',
-                departureDateDays: 'In 3 days',
-                departureAirport: 'Paris (CDG)',
-                departureTime: '07:15',
-                arrivalCity: 'Miami',
-                arrivalTime: '10:15',
-                flightTime: '5:00',
-                flightChain: 'CDG - MIA',
-                flightPrice: Math.ceil(Math.random() * 800) + ' $'
-            }
-        }
-    }
+            case 'Flights' :
+                return {
+                    airlineIcon: this.getPlaceIMGUri(48,48),
+                    airlineName: this.getRandArrEl(['Delta', 'Vueling', 'American', 'Transavia']),
+                    airlineFlightNum: 'DL' + Math.ceil(Math.random() * 10000),
+                    departureDate: '03/11/2019',
+                    departureDateDays: 'In 3 days',
+                    departureAirport: 'Paris (CDG)',
+                    departureTime: '07:15',
+                    arrivalCity: 'Miami',
+                    arrivalTime: '10:15',
+                    flightTime: '5:00',
+                    flightChain: 'CDG - MIA',
+                    flightPrice: Math.ceil(Math.random() * 800) + ' $'
+                };
+            case 'Hotels' : return {
+                    name: this.getRandArrEl(['Hilton', 'Lorem', 'Ipsum', 'Dolor']),
+                    thumb: this.getPlaceIMGUri(350,200),
+                    distance: (Math.random() * 40).toFixed(1) + ' km',
+                    benefit: 'Free Wi-Fi',
+                    price:   10 + Math.ceil(Math.random() * 100) + ' $'
+                };
+            case 'Attractions' :
+                let mockDataObj = {};
+                mockDataObj.name = this.getRandArrEl(['Eiffel Tower', 'Louvres', 'Notre Dame de Paris', 'Forum des Halles']);
+
+                switch (idx) {
+                    case 0:
+                        mockDataObj.thumb = this.getPlaceIMGUri(350,525);
+                        break;
+                    case 2:
+                    case 3:
+                        mockDataObj.thumb = this.getPlaceIMGUri(730,247);
+                        break;
+                    case 1:
+                    case 4:
+                    case 5:
+                        mockDataObj.thumb = this.getPlaceIMGUri(350,260);
+                        break;
+                }
+
+                return mockDataObj;
+                break;
+            case 'Trips' : return {
+                    name: this.getRandArrEl(['Hilton', 'Lorem', 'Ipsum', 'Dolor']),
+                    thumb: this.getPlaceIMGUri(350,230),
+                    desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque ' +
+                        'laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi ' +
+                        'architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas ' +
+                        'sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione ' +
+                        'voluptatem sequi nesciunt.'
+                };
+        };
+    };
 
     this.genMockDataItems = function (travelType, count) {
         let mockDataObj = undefined, res = [];
 
         for (let j=0; j<count; j++)
-            res.push(this.genRandomItemData(travelType));
+            res.push(this.genRandomItemData(travelType, j));
 
         return res;
     };
@@ -133,6 +171,7 @@ function MockDataGenerator () {
             let travelTypeObj   = {
                 name    : this.travelTypeData[i].name,
                 items   : [],
+                href    : this.travelTypeData[i].href,
                 itemsCount  : this.travelTypeData[i].items_count,
                 sortOptions : this.travelTypeData[i].sort_options,
                 sortActive  : this.travelTypeData[i].sort_active,
