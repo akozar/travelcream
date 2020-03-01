@@ -146,6 +146,11 @@
     display: inline-block;
 }
 
+.navbar-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
 @media (min-width: 992px) and (max-width:1199px) {
     .header-home .header-headings {
         width: 100%;
@@ -171,11 +176,6 @@
 @media (max-width:575.98px) {
     .header-home {
         height: 320px;
-    }
-
-    .navbar-wrapper {
-        position: relative;
-        z-index: 2;
     }
 
     .header-home .header-heading-search-wrapper .search-block {
@@ -219,6 +219,9 @@
     margin-bottom: 28px;
 }
 
+/*
+    Flights Template
+ */
 .flights-tbl-heading {
     font-size: 16px;
     font-weight: bold;
@@ -271,6 +274,75 @@
         display: flex;
         align-items: center;
     }
+}
+
+/*
+    Hotels Template
+*/
+
+.hotel-card-wrapper {
+    margin-bottom: 20px;
+}
+
+.hotel-card {
+    border: 1px solid #e6e6e6;
+}
+
+.hotel-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hotel-card .hotel-name,
+.hotel-card .distance-benefit-block {
+    line-height: 26px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.hotel-card .distance-benefit-block {
+    color: rgba(128, 128, 128, 0.79);
+    margin-bottom: 15px;
+}
+
+.hotel-card .hotel-card-bottom {
+    padding: 15px;
+}
+
+.hotel-card .distance-benefit-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hotel-card .distance-benefit-block > div {
+    display: inline-block;
+}
+
+/*
+    Trips Template
+*/
+
+.trips-list > .row {
+    margin-bottom: 15px;
+}
+
+.trip-card-img-wrapper,
+.trip-desc-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trip-desc-wrapper .trip-name,
+.trip-desc-wrapper .trip-desc {
+    line-height: 26px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.trip-desc-wrapper .trip-desc {
+    font-weight: 400;
 }
 
 /*
