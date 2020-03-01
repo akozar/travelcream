@@ -57,6 +57,41 @@
 </script>
 <!-- /ko -->
 
+<!-- ko if: name() == 'Attractions' -->
+<script type="text/html" id="templateAttractions">
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="row">
+                <div class="col-12">
+                    <img data-bind="attr: { src: travelItems[0].thumb }" />
+                </div>
+                <div class="col-12">
+                    <img data-bind="attr: { src: travelItems[1].thumb }" />
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-8">
+            <div class="row">
+                <div class="col-12">
+                    <img data-bind="attr: { src: travelItems[2].thumb }" />
+                </div>
+                <div class="col-12">
+                    <img data-bind="attr: { src: travelItems[3].thumb }" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <img data-bind="attr: { src: travelItems[4].thumb }" />
+                </div>
+                <div class="col-6">
+                    <img data-bind="attr: { src: travelItems[5].thumb }" />
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+<!-- /ko -->
+
 <!-- ko if: name() == 'Trips' -->
 <script type="text/html" id="templateTrips">
     <div class="row">

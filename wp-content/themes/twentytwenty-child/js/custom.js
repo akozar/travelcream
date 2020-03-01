@@ -97,10 +97,10 @@ function MockDataGenerator () {
         return 'https://placeimg.com/' + width + '/' + height + '/' + this.getRandArrEl(this.placeIMGTypes);
     }
 
-    this.genRandomItemData = function (travelType) {
+    this.genRandomItemData = function (travelType, idx) {
         switch (travelType) {
             case 'Flights' :
-                return mockDataObj = {
+                return {
                     airlineIcon: this.getPlaceIMGUri(48,48),
                     airlineName: this.getRandArrEl(['Delta', 'Vueling', 'American', 'Transavia']),
                     airlineFlightNum: 'DL' + Math.ceil(Math.random() * 10000),
@@ -114,14 +114,35 @@ function MockDataGenerator () {
                     flightChain: 'CDG - MIA',
                     flightPrice: Math.ceil(Math.random() * 800) + ' $'
                 };
-            case 'Hotels' : return mockDataObj = {
+            case 'Hotels' : return {
                     name: this.getRandArrEl(['Hilton', 'Lorem', 'Ipsum', 'Dolor']),
                     thumb: this.getPlaceIMGUri(350,200),
                     distance: (Math.random() * 40).toFixed(1) + ' km',
                     benefit: 'Free Wi-Fi',
                     price:   10 + Math.ceil(Math.random() * 100) + ' $'
                 };
-            case 'Trips' : return mockDataObj = {
+            case 'Attractions' :
+                let mockDataObj = {};
+                mockDataObj.name = this.getRandArrEl(['Eiffel Tower', 'Louvres', 'Notre Dame de Paris', 'Forum des Halles']);
+
+                switch (idx) {
+                    case 0:
+                        mockDataObj.thumb = this.getPlaceIMGUri(350,525);
+                        break;
+                    case 2:
+                    case 3:
+                        mockDataObj.thumb = this.getPlaceIMGUri(730,247);
+                        break;
+                    case 1:
+                    case 4:
+                    case 5:
+                        mockDataObj.thumb = this.getPlaceIMGUri(350,260);
+                        break;
+                }
+
+                return mockDataObj;
+                break;
+            case 'Trips' : return {
                     name: this.getRandArrEl(['Hilton', 'Lorem', 'Ipsum', 'Dolor']),
                     thumb: this.getPlaceIMGUri(350,230),
                     desc: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque ' +
@@ -137,7 +158,7 @@ function MockDataGenerator () {
         let mockDataObj = undefined, res = [];
 
         for (let j=0; j<count; j++)
-            res.push(this.genRandomItemData(travelType));
+            res.push(this.genRandomItemData(travelType, j));
 
         return res;
     };

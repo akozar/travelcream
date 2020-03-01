@@ -25,6 +25,13 @@
 </div>
 <!-- /ko -->
 
+<!-- ko if: name() == 'Attractions' -->
+<div class="col-12 section-content">
+    <div class="attraction-list" data-bind="template: { name: $parent.getTemplateDomId(name()), data: $parent.getItems(name(), sortActive()), as: 'travelItems' }">
+    </div>
+</div>
+<!-- /ko -->
+
 <!-- ko if: name() == 'Trips' -->
 <div class="col-12 section-content">
     <div class="trips-list" data-bind="template: { name: $parent.getTemplateDomId(name()), foreach: $parent.getItems(name(), sortActive()), as: 'travelItem' }">
