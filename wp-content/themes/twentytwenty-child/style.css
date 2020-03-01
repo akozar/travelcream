@@ -328,6 +328,20 @@
 
 .attraction-list img {
     margin-bottom: 31px;
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 992px) and (max-width:1199px) {
+    .attraction-list img {
+        margin-bottom: 22px;
+    }
+}
+
+@media (min-width:575.99px) and (max-width:991px) {
+    .attraction-list img {
+        margin-bottom: 10px;
+    }
 }
 
 /*
