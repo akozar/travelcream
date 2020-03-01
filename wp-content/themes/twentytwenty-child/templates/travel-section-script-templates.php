@@ -36,6 +36,7 @@
         </div>
         <div class="col-6 col-md order-flight-col"><div class="btn home-btn cta" data-bind="text: travelItem.flightPrice"></div></div>
     </div>
+    <hr>
 </script>
 <!-- /ko -->
 
@@ -95,12 +96,18 @@
 <!-- ko if: name() == 'Trips' -->
 <script type="text/html" id="templateTrips">
     <div class="row">
-        <div class="col-4 trip-card-img-wrapper">
-            <img data-bind="attr: { src: travelItem.thumb }" />
-        </div>
-        <div class="col-8 trip-desc-wrapper">
-            <p class="trip-name" data-bind="text: travelItem.name"></p>
-            <p class="trip-desc" data-bind="text: travelItem.desc"></p>
+        <div class="col-12">
+            <div class="trip-card-wrapper">
+                <div class="row">
+                    <div class="col-4 trip-card-img-wrapper">
+                        <img data-bind="attr: { src: travelItem.thumb }" />
+                    </div>
+                    <div class="col-8 trip-desc-wrapper">
+                        <p class="trip-name" data-bind="text: travelItem.name"></p>
+                        <p class="trip-desc" data-bind="text: travelItem.desc"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </script>

@@ -6,5 +6,8 @@
             <a href="#" data-bind="text: $data, css: { active: $data == $parent.sortActive() } , click: $root.updateSortOption.bind($data, $parent.name)"></a>
         </div>
         <?php get_template_part( 'templates/travel-section-content' ); ?>
+        <div class="col-12 text-right section-links show-more-link">
+            <a data-bind="text: 'See all '.concat(travelType.name()), attr: { href: travelType.href }"></a>
+        </div>
     </div>
 </div>

@@ -171,6 +171,7 @@ function MockDataGenerator () {
             let travelTypeObj   = {
                 name    : this.travelTypeData[i].name,
                 items   : [],
+                href    : this.travelTypeData[i].href,
                 itemsCount  : this.travelTypeData[i].items_count,
                 sortOptions : this.travelTypeData[i].sort_options,
                 sortActive  : this.travelTypeData[i].sort_active,
